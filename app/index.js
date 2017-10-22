@@ -7,6 +7,8 @@ import PatientRecords from './PatientRecords';
 import MakeDonations from './MakeDonations';
 import DonationsHistory from './DonationsHistory';
 import ModalScreen from './ModalScreen';
+import Triage from './Triage';
+
 
 // Simple component to render something in place of icon
 const TabIcon = ({ selected, title }) => {
@@ -20,13 +22,8 @@ const App = () => {
         <Router>
             <Scene key="root" hideNavBar>
                 <Scene
-                    key="tabbar"
-                    tabs={true}
-                    tabBarPosition="bottom"
-                    tabBarStyle={{ backgroundColor: '#FFFFFF' }}
                 >
                     {/* Tab and it's scenes */}
-                    <Scene key="records" title="Records" icon={TabIcon}>
                         <Scene
                             key="patientRecords"
                             component={PatientRecords}
@@ -35,10 +32,8 @@ const App = () => {
                             titleStyle={styles.titleStyle}
                             initial
                         />
-                    </Scene>
 
                     {/* Tab and it's scenes */}
-                    <Scene key="donations" title="Donations" icon={TabIcon}>
                         <Scene
                             key="makeDonations"
                             component={MakeDonations}
@@ -46,10 +41,7 @@ const App = () => {
                             navigationBarStyle={styles.navBar}
                             titleStyle={styles.titleStyle}
                         />
-                    </Scene>
 
-                    {/* Tab and it's scenes */}
-                    <Scene key="history" title="History" icon={TabIcon}>
                         <Scene
                             key="donationHistory"
                             component={DonationsHistory}
@@ -57,7 +49,13 @@ const App = () => {
                             navigationBarStyle={styles.navBar}
                             headerTitleStyle={styles.titleStyle}
                         />
-                    </Scene>
+                        <Scene
+                            key="triage"
+                            component={Triage}
+                            title="Triage"
+                            navigationBarStyle={styles.navBar}
+                            headerTitleStyle={styles.titleStyle}
+                        />
                 </Scene>
                 <Scene
                     key="modal"

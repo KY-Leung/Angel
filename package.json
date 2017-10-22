@@ -12,7 +12,8 @@
 		"react-native-elements": "^0.17.0",
 		"react-native-fa-icons": "^3.0.1",
 		"react-native-router-flux": "^4.0.0-beta.22",
-		"react-native-vector-icons": "^4.4.2"
+		"react-native-vector-icons": "^4.4.2",
+		"rn-sliding-up-panel": "^1.1.7"
 	},
 	"devDependencies": {
 		"babel-jest": "21.2.0",
