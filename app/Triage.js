@@ -4,12 +4,12 @@ import {
     ScrollView
 } from 'react-native';
 import CardView from './components/CardView'
-import CardViewNoButton from "./components/CardViewNoButton"
+import CardViewNoButton2 from "./components/CardViewNoButton2"
 
 const Triage = () => {
     return (
         <ScrollView contentContainerStyle={{justifyContent: 'flex-start', alignItems: 'center'}} style={styles.container}>
-            <CardViewNoButton/>
+            <CardViewNoButton2/>
         </ScrollView>
     );
 }
