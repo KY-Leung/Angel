@@ -8,8 +8,9 @@ import MakeDonations from './MakeDonations';
 import DonationsHistory from './DonationsHistory';
 import ModalScreen from './ModalScreen';
 import Triage from './Triage';
+import Bill from './Bill';
+import SubsidyPage from './Subsidy';
 
-//
 // let blockchain = require('mastercard-blockchain');
 // let MasterCardAPI = blockchain.MasterCardAPI;
 // // comment for frontend
@@ -57,7 +58,11 @@ const App = () => {
                             navigationBarStyle={styles.navBar}
                             titleStyle={styles.titleStyle}
                         />
-
+                        <Scene
+                            key="subsidy"
+                            component={SubsidyPage}
+                            title="Patient Bill Subsidized"
+                        />
                         <Scene
                             key="donationHistory"
                             component={DonationsHistory}
@@ -68,7 +73,14 @@ const App = () => {
                         <Scene
                             key="triage"
                             component={Triage}
-                            title="Triage"
+                            title="Treatments"
+                            navigationBarStyle={styles.navBar}
+                            headerTitleStyle={styles.titleStyle}
+                        />
+                        <Scene
+                            key="bill"
+                            component={Bill}
+                            title="Treatment Bills"
                             navigationBarStyle={styles.navBar}
                             headerTitleStyle={styles.titleStyle}
                         />

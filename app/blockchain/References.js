@@ -7,7 +7,7 @@ let MasterCardAPI = blockchain.MasterCardAPI;
 // const donor = "c8d2a7f0f64b2cb0638af7d196246e6b579ae618b292b80bcda6e4390a859207";
 
 let patient = {
-
+    name: "jane"
 };
 let encounters = [{
     date: 1508673975,

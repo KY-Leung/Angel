@@ -43,7 +43,7 @@ const CardView = (props) => {
                     </View>
                     <View style={{paddingTop: 10, marginLeft: -16}}>
                         <View style = {{width: 150, height: 50}}>
-                            <Button backgroundColor = 'steelblue' title={'View more'} onPress={() => Actions.modal()}/>
+                            <Button backgroundColor = 'steelblue' title={'View more'} onPress={() => Actions.subsidy()}/>
                         </View>
                     </View>
                 </Card>
