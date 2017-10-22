@@ -15,16 +15,16 @@ class PatientDetails extends Component {
         return (
             <View style={styles.container}>
                 <Avatar
-                    xlarge
+                    large
                     rounded
                     source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"}}
                     onPress={() => console.log("Works!")}
                     activeOpacity={0.7}
                 />
-                <View style={styles.welcome}>
-                    <Text>Arian Silvia</Text>
-                    <Text>March7, 2003</Text>
-                    <Text>Laura Silvia (Guardian)</Text>
+                <View>
+                    <Text style={styles.welcome}>Arian Silvia</Text>
+                    <Text style={styles.welcome}>March7, 2003</Text>
+                    <Text style={styles.welcome}>Laura Silvia (Guardian)</Text>
                 </View>
             </View>
         );
