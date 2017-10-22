@@ -3,13 +3,14 @@ import { Text } from 'react-native';
 import { Router, Scene } from 'react-native-router-flux';
 import Icon from 'react-native-fa-icons';
 
+import Login from './Login';
 import PatientRecords from './PatientRecords';
 import MakeDonations from './MakeDonations';
 import DonationsHistory from './DonationsHistory';
 import ModalScreen from './ModalScreen';
-import Triage from './Triage';
 import Bill from './Bill';
 import SubsidyPage from './Subsidy';
+import Triage from './components/CardViewNoButton2';
 
 // let blockchain = require('mastercard-blockchain');
 // let MasterCardAPI = blockchain.MasterCardAPI;
@@ -42,6 +43,13 @@ const App = () => {
                 >
                     {/* Tab and it's scenes */}
                         <Scene
+                            key="login"
+                            component={Login}
+                            title="Login"
+                            navigationBarStyle={styles.navBar}
+                            titleStyle={styles.titleStyle}
+                        />
+                        <Scene
                             key="patientRecords"
                             component={PatientRecords}
                             title="Patient Records"
@@ -61,7 +69,9 @@ const App = () => {
                         <Scene
                             key="subsidy"
                             component={SubsidyPage}
-                            title="Patient Bill Subsidized"
+                            title="Patient Bill Subsidized           "
+                            navigationBarStyle={styles.navBar}
+                            titleStyle={styles.titleStyle}
                         />
                         <Scene
                             key="donationHistory"
@@ -73,7 +83,7 @@ const App = () => {
                         <Scene
                             key="triage"
                             component={Triage}
-                            title="Treatments"
+                            title="Treatments             "
                             navigationBarStyle={styles.navBar}
                             headerTitleStyle={styles.titleStyle}
                         />

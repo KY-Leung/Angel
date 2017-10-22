@@ -7,6 +7,7 @@ import {
     ScrollView,
     Button
 } from 'react-native';
+import { Actions } from 'react-native-router-flux';
 
 const total = "$213.20";
 const balance = "$0.00";
@@ -37,7 +38,7 @@ const SubsidyPage = () => {
               <Text style={{marginRight: 16, color: "green", fontWeight: 'bold', fontSize: 50}}>{balance}</Text>
           </View>
           <View style={{width: '80%', height: 48, alignSelf: 'center'}}>
-          <Button height="36px" style={{alignSelf: 'center', height: '100%', paddingLeft: 16, paddingRight: 16, width: 300, color: 'steelblue' }} title={'Confirm'} onPress={() => {}}>Confirm</Button>
+          <Button height="36px" style={{alignSelf: 'center', height: '100%', paddingLeft: 16, paddingRight: 16, width: 300, backgroundColor: '#01a1d3' }} title={'Acknowledge'} onPress={() => Actions.patientRecords()}>Confirm</Button>
       </View></View>
   );
 };

@@ -8,6 +8,7 @@ import {
     ScrollView
 } from 'react-native';
 import { Card, ListItem, Button } from 'react-native-elements';
+import { Actions } from 'react-native-router-flux';
 import RectButton from './RectButton';
 import SlidingUpPanel from 'rn-sliding-up-panel';
 
@@ -62,7 +63,7 @@ const CardViewNoButton2 = (props) => {
             <Text style={{padding: 4, paddingLeft: 16, fontSize: 14, marginBottom: -8, }}>Type: Intramuscular Injection</Text>
             <Text style={{padding: 4, paddingLeft: 16, fontSize: 14, marginBottom: -8, }}>Dose Quantity: 50 /mcg</Text>
             <View style = {{width: 150, height: 50, alignSelf: 'center', marginTop: 16}}>
-                <Button backgroundColor = 'steelblue' title='Confirm' />
+                <Button backgroundColor = '#01a1d3' title='Confirm' onPress={() => Actions.subsidy()}/>
             </View>
 
 
