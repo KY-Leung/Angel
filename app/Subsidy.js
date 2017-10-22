@@ -3,6 +3,7 @@ import {
     StyleSheet,
     Text,
     View,
+    FlatList,
     ScrollView
 } from 'react-native'
 
@@ -11,12 +12,10 @@ const balance = "$0.00";
 
 const SubsidyPage = () => {
   return (
-      <FlatList>
           <View style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
               <Text>Total Bill: </Text>
-              <Text style={{fontColor: "orange", }}>{{total}}</Text>
+              <Text style={{color: "orange", }}>{total}</Text>
           </View>
-      </FlatList>
   );
 };
 
