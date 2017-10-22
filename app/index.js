@@ -4,7 +4,7 @@ import { Router, Scene } from 'react-native-router-flux';
 import Icon from 'react-native-fa-icons';
 
 import PatientRecords from './PatientRecords';
-import MakeDonations from './MakeDonations';
+import MakeDonations from './Triage';
 import DonationsHistory from './DonationsHistory';
 import ModalScreen from './ModalScreen';
 
