@@ -5,15 +5,12 @@ import {
     View
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import PatientDetails from './components/PatientDetails'
 
 const PatientRecords = () => {
     return (
         <View style={styles.container}>
-            <Text
-                style={styles.welcome}
-            >
-                Patient Records
-            </Text>
+            <PatientDetails/>
         </View>
     );
 }
@@ -21,7 +18,7 @@ const PatientRecords = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
+        flexDirection: 'column',
         alignItems: 'center',
         backgroundColor: '#ffffff',
     },
