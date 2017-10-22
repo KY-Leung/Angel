@@ -1,0 +1,14 @@
+syntax = "proto3";
+package TM88;
+
+message Donor {
+    string id = 1;
+    string name = 2;
+    Country country = 3;
+    enum Country {
+        USA = 0;
+        CN = 1;
+        FR = 2;
+        SG = 3;
+    }
+}

@@ -1,21 +1,18 @@
 syntax = "proto3";
 package TM88;
 
-message Patient {
-    int64 id = 1;
-    string name = 2;
-}
 
 message Encounter {
-    int64 id = 1;
+    string id = 1;
     int64 date = 2;
+    string description = 10;
     string agent = 3;
     string organization = 4;
 
-    int64 patient_id = 5;
+    string patient_id = 5;
     VitalSigns vitals = 6;
     Diagnosis diagnosis = 7;
-    int64 bill_id = 8;
+    string bill_id = 8;
     repeated Procedure procedures = 9;
 
     message VitalSigns {
@@ -45,35 +42,4 @@ message Encounter {
         string instructions = 3;
         int64 cost = 4;
     }
-}
-
-message Bill {
-    int64 id = 1;
-    int64 encounter_id = 2;
-    int64 total = 3;
-}
-
-//////////////////////////
-
-message Donor {
-    int64 id = 1;
-    string name = 2;
-    Country country = 3;
-    enum Country {
-        USA = 0;
-        CN = 1;
-        FR = 2;
-        SG = 3;
-    }
-}
-
-message Donation {
-    int64 donor_id = 1;
-    int64 amount = 2;
-    int64 bill_id = 4;
-}
-
-message FundTopup {
-    int64 donor_id = 1;
-    int64 amount = 2;
 }

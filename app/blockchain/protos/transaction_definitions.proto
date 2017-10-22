@@ -1,0 +1,79 @@
+syntax = "proto3";
+package TM88;
+
+message Patient {
+    string name = 2;
+}
+
+message Encounter {
+    int64 date = 2;
+    string agent = 3;
+    string organization = 4;
+
+    string patient_id = 5;
+    VitalSigns vitals = 6;
+    Diagnosis diagnosis = 7;
+    string bill_id = 8;
+    repeated Procedure procedures = 9;
+
+    message VitalSigns {
+        int32 blood_pressure_sys = 1;
+        int32 blood_pressure_dia = 2;
+        int32 pulse_rate = 3;
+        float temperature_F = 4;
+        float weight_lbs = 5;
+    }
+
+    message Diagnosis {
+        string result = 1;
+        string presentation = 2;
+    }
+
+    message Procedure {
+        enum Type {
+            VACCINATION = 0;
+            MEDICATION = 1;
+            SURGERY = 2;
+            EMERGENCY = 3;
+            MATERNITY = 4;
+            SCREENING = 5;
+            SPECIALIST = 6;
+        }
+        string description = 1;
+        Type type = 2;
+        string instructions = 3;
+        int64 cost = 4;
+    }
+}
+
+message Bill {
+    int64 id = 1;
+    string encounter_id = 2;
+    int64 total = 3;
+}
+
+//////////////////////////
+
+message Donor {
+    
+    string name = 2;
+    Country country = 3;
+    enum Country {
+        USA = 0;
+        CN = 1;
+        FR = 2;
+        SG = 3;
+    }
+}
+
+message Donation {
+    int64 id = 3;
+    string donor_id = 1;
+    int64 amount = 2;
+    string bill_id = 4;
+}
+
+message FundTopup {
+    string donor_id = 1;
+    int64 amount = 2;
+}

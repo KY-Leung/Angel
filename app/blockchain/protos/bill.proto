@@ -1,0 +1,8 @@
+syntax = "proto3";
+package TM88;
+
+message Bill {
+    string id = 1;
+    string encounter_id = 2;
+    int64 total = 3;
+}

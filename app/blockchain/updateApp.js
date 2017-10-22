@@ -11,6 +11,7 @@ let MasterCardAPI = blockchain.MasterCardAPI;
 // comment for frontend
 let keys = require('./Keys.js');
 keys.auth();
+let fs = require('fs');
 /**
  *
  * Script-Name: example_get_app
@@ -37,8 +38,11 @@ let readApp = () => {
         });
 };
 
-let updateApp = () => {
-    var requestData = {
+let updateApp = (filePath) => {
+    let data = fs.readFileSync(filePath);
+    let encoded = data.toString('base64');
+    console.log(encoded);
+    let requestData = {
         "id": keys.appId,
         "name": keys.appId,
         "description": "",
@@ -46,7 +50,7 @@ let updateApp = () => {
         "definition": {
             "format": "proto3",
             "encoding": "base64",
-            "messages": "Ly8gU2ltcGxlIG5vdGFyeSBhcHBsaWNhdGlvbg0KDQpzeW50YXggPSAicHJvdG8zIjsNCg0KcGFja2FnZSBFMTAyOw0KDQptZXNzYWdlIE1lc3NhZ2Ugew0KCWJ5dGVzIGFydGlmYWN0UmVmZXJlbmNlID0gMTsNCn0\u003d"
+            "messages": encoded
         }
     };
     blockchain.App.update(requestData
@@ -63,3 +67,5 @@ let updateApp = () => {
             }
         });
 };
+// readApp();
+updateApp('./protos/transaction_definitions.proto');
