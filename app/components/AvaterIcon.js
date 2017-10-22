@@ -13,15 +13,13 @@ class PatientDetails extends Component {
         const cellId = ("" + props.rowIndex + props.colIndex);
 
         return (
-            <View style={styles.container}>
-                <Avatar
+            <Avatar
                     large
                     rounded
                     source={{uri: "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg"}}
                     onPress={() => console.log("Works!")}
                     activeOpacity={0.7}
                 />
-            </View>
         );
     }
 };
