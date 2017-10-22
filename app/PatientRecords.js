@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     Text,
-    View
+    View,
+    ScrollView
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
-import PatientDetails from './components/PatientDetails'
+import AvaterIcon from './components/AvaterIcon'
+import CardView from './components/CardView'
 
 const PatientRecords = () => {
     return (
-        <View style={styles.container}>
-            <PatientDetails/>
-        </View>
+        <ScrollView contentContainerStyle={{justifyContent: 'flex-start', alignItems: 'center'}} style={styles.container}>
+            <AvaterIcon/>
+            <CardView/>
+        </ScrollView>
     );
 }
 
@@ -19,14 +22,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        alignItems: 'center',
         backgroundColor: '#ffffff',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-        color: '#000000',
     },
 });
 
