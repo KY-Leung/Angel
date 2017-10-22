@@ -5,7 +5,8 @@ import {
     Image,
     Text,
 } from 'react-native';
-import { Card, ListItem, Button } from 'react-native-elements'
+import { Card, ListItem, Button } from 'react-native-elements';
+import RectButton from './RectButton';
 
 const users = [
     {
@@ -35,8 +36,11 @@ const CardView = (props) => {
         users.map((u, i) => {
             return (
                 <Card key={i} title="CARD WITH DIVIDER" containerStyle={styles.containerStyle} featuredTitleStyle={{color: '#8f8f8f'}}>
-                    <View>
+                    <View style={{paddingTop: 10}}>
                         <Text>{u.name}</Text>
+                    </View>
+                    <View style={{paddingTop: 10, marginLeft: -16}}>
+                        <RectButton title={'View more'}/>
                     </View>
                 </Card>
             )
@@ -46,6 +50,7 @@ const CardView = (props) => {
 
 const styles = StyleSheet.create({
     containerStyle: {
+        alignContent: 'flex-start',
         width: '95%'
     }
 });

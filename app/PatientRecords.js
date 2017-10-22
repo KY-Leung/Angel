@@ -8,6 +8,7 @@ import {
 import { Actions } from 'react-native-router-flux';
 import AvaterIcon from './components/AvaterIcon'
 import CardView from './components/CardView'
+import Icon from 'react-native-fa-icons';
 
 const PatientRecords = () => {
     return (
@@ -22,8 +23,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: 'column',
-        backgroundColor: '#ffffff',
-    },
+        backgroundColor: 'lightgrey',
+    }
 });
 
 export default PatientRecords;
